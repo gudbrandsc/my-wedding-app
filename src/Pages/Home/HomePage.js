@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import SakuraContainer from '../../SakuraContainer/SakuraContainer';
 import { Divider, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
 import proposal from '../../assets/images/proposal5.jpg';
@@ -86,6 +86,7 @@ function HomePage() {
                 />
               )}
               <img
+                alt={'proposal'}
                 onLoad={() => setLoaded(true)}
                 srcSet={proposal}
                 src={proposal}
