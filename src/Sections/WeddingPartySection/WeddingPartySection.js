@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Link, Stack, Typography } from '@mui/material';
 import ChurchMap from './ChurchMap';
-import church from '../../../../my-awesome-wedding/src/assets/images/church.jpg';
+import church from '../../assets/images/church.jpg';
 
 function WeddingPartySection(props) {
   return (
