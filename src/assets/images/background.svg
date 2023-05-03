@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg width="100%" height="100%" viewBox="0 0 500 150"  xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient" gradientTransform="rotate(90)">
+            <stop offset="0%"   stop-color="rgba(0, 185, 245,0.0)"/>
+            <stop offset="100%" stop-color="rgba(0, 185, 245,0.25)"/>
+        </linearGradient>
+        <linearGradient id="gradient2" gradientTransform="rotate(90)">
+            <stop offset="0%"   stop-color="rgba(0, 185, 245,0.0)"/>
+            <stop offset="100%" stop-color="rgba(0, 185, 245,0.35)"/>
+        </linearGradient>
+    </defs>
+    <path d="M2.55,41.95 C123.30,-13.30 368.22,199.84 510.44,82.41 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: url(#gradient);"></path>
+    <path d="M0.00,49.98 C123.30,-13.30 362.58,215.63 509.87,94.25 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: url(#gradient2);"></path>
+    </svg>
