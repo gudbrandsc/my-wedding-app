@@ -11,8 +11,6 @@ import WeddingPartySection from '../../Sections/WeddingPartySection/WeddingParty
 import FaqSection from '../../Sections/FaqSection';
 import FridaySection from '../../Sections/FridaySection/FridaySection';
 import ImportantSection from '../../Sections/ImportantSection/ImportantSection';
-import { getToken, setToken } from './helpers';
-import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
   const [tab, setTab] = useState(1);
