@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from '@mui/material';
 
 function SakuraContainer({ number = 100, children }) {
   const getLeafs = () => {

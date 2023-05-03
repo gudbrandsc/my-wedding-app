@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import mapboxgl, { NavigationControl } from 'mapbox-gl';
 import AnimatedPopup from 'mapbox-gl-animated-popup';
 

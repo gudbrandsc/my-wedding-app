@@ -410,3 +410,7 @@ p {
   right: -10px;
   background: #a8a8a9;
 }
+.vertical-line {
+  border-left: 2px solid #83ac8a;
+  height: 1em;
+}

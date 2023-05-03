@@ -11,7 +11,8 @@ export const WeddingTheme = createTheme({
       'sans-serif'
     ].join(','),
     body1: { fontSize: '1.1rem' },
-    subtitle1: { fontSize: '1.25rem' },
+    body2: { fontSize: '1.1rem' },
+    subtitle1: { fontSize: '1.1rem' },
     h5: { fontSize: '1.55rem' }
   },
   palette: {
@@ -58,8 +59,8 @@ export const WeddingTheme = createTheme({
       main: '#fff'
     },
     background: {
-      default: '#ffffff',
-      paper: '#071a2f'
+      default: '#fdfbfa',
+      paper: '#fdfbfa'
     },
     border: {
       white: '#fff',
@@ -71,7 +72,7 @@ export const WeddingTheme = createTheme({
       black: '#000',
       lightGray: '#f4f5f7',
       darkGray: '#696975',
-      paperBlue: '#071a2f'
+      paperBlue: '#ffffff'
     },
     text: {
       primary: 'rgba(0, 0, 0, 0.85)',

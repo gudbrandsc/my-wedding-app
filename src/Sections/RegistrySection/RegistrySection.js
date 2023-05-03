@@ -1,14 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Grid, Link, Stack, Typography } from '@mui/material';
-import AccommodationMap from '../AccommodationSection/AccommodationMap';
+import { Grid, Link, Stack } from '@mui/material';
 
 function RegistrySection(props) {
   return (
     <Grid container spacing={1}>
       <Grid item xs={6}>
         <Stack>
-          <Typography sx={{ pl: 0 }}>WE WANT GIFTS</Typography>
           <list>
             <li>
               <Link
