@@ -23,6 +23,7 @@ function App() {
     <ThemeProvider theme={WeddingTheme}>
       <CssBaseline />
       <Routes>
+        <Route path="/" element={<Navigate to="/" />} />
         <Route path="*" element={<Navigate to="/login" />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route exact path="/login" element={<LoginPage />} />
