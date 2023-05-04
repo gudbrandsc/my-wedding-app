@@ -4,6 +4,7 @@ import AnimatedPopup from 'mapbox-gl-animated-popup';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiZ3VkYnJhbmRzY2hpc3RhZCIsImEiOiJjbDZjYXkzdmIwcWx2M2JxbHppMjhkZHpqIn0.BUVI0Nirf9dkY6mDJ8hz9w';
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 function AccommodationMap(props) {
   const mapContainer = useRef(null);
   const map = useRef(null);
