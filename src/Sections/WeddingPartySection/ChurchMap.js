@@ -15,7 +15,7 @@ function AccommodationMap(props) {
         properties: {
           description: `<div style="display: flex; 
               flex-direction: column;"> 
-            Venue</div>`,
+            Nordre Lerberg(Venue)</div>`,
           message: 'Home',
           iconSize: [40, 40]
         },
@@ -29,7 +29,7 @@ function AccommodationMap(props) {
         properties: {
           description: `<div style="display: flex; 
               flex-direction: column;"> 
-            Church</div>`,
+            Norderhov Church</div>`,
           message: 'Church',
           iconSize: [40, 40]
         },
@@ -87,9 +87,9 @@ function AccommodationMap(props) {
 
           // Populate the popup and set its coordinates
           // based on the feature found.
-          console.log(marker.geometry.coordinates);
+          let last = marker.geometry.coordinates[1] + 0.003;
           popup
-            .setLngLat(marker.geometry.coordinates)
+            .setLngLat([marker.geometry.coordinates[0], last])
             .setHTML(marker.properties.description)
             .addTo(map.current);
         });

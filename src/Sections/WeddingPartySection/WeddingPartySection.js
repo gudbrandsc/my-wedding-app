@@ -44,6 +44,9 @@ function WeddingPartySection() {
                 Address: Sandakerveien 377, 3519 Hønefoss
               </Link>
             </Typography>
+            <Typography sx={{ pl: 0 }}>
+              <b>Toastmaster</b>: Erik Follestad (+47 957 84 488)
+            </Typography>
           </Stack>
           <Paper variant={'outlined'} sx={{ p: 2 }}>
             <Stack alignItems={'center'} spacing={0.5}>

@@ -18,7 +18,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "mapbox-gl": "^2.9.2",
+    "mapbox-gl": "1.13.0",
     "mapbox-gl-animated-popup": "^0.4.0",
     "moment": "^2.29.4",
     "prettier": "^2.5.1",
@@ -43,7 +43,7 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.2%, not dead, not ie 11, not chrome < 51, not safari < 10",
       "not dead",
       "not op_mini all"
     ],

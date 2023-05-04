@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import mapboxgl, { NavigationControl } from 'mapbox-gl';
 import AnimatedPopup from 'mapbox-gl-animated-popup';
+import mapboxgl, { NavigationControl } from '!mapbox-gl';
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiZ3VkYnJhbmRzY2hpc3RhZCIsImEiOiJjbDZjYXkzdmIwcWx2M2JxbHppMjhkZHpqIn0.BUVI0Nirf9dkY6mDJ8hz9w';
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+mapboxgl.workerClass = MapboxWorker;
+
 function AccommodationMap(props) {
   const mapContainer = useRef(null);
   const map = useRef(null);
