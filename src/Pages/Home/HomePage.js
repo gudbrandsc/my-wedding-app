@@ -24,7 +24,7 @@ function HomePage() {
         sx={{ position: 'absolute', mt: '5vh', pb: '5em' }}
         spacing={2}
         justifyContent={'center'}>
-        <Grid sx={{ mb: '5vh' }} item sm={12} md={8}>
+        <Grid sx={{ mb: '5vh' }} item xs={12}>
           <Stack sx={{ alignItems: 'center' }} spacing={1}>
             <Typography color={'primary'} variant={'h2'}>
               Hedvig & Gudbrand
@@ -38,8 +38,8 @@ function HomePage() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item sm={12} md={8}>
-          <Tabs value={tab} onChange={(_, val) => setTab(val)} centered>
+        <Grid item xs={8}>
+          <Tabs variant={'scrollable'} value={tab} onChange={(_, val) => setTab(val)}>
             <Tab label={'Home'} value={1} />
             <Tab label={'The day'} value={2} />
             <Tab label={'Friday'} value={6} />
@@ -51,11 +51,20 @@ function HomePage() {
           <Divider />
         </Grid>
         {tab === 1 && (
-          <Grid item sm={8} md={8}>
+          <Grid item xs={8}>
             <div style={{ position: 'relative' }}>
               {loaded && (
                 <Countdown
                   renderer={(values) => {
+                    let weddingDate = moment('12-08-2023 13:00:00', 'DD-MM-yyyy HH:mm:ss');
+                    let days = values.days || weddingDate.diff(moment(), 'days');
+                    weddingDate = weddingDate.subtract(days, 'days');
+                    let hours = values.hours || weddingDate.diff(moment(), 'hours');
+                    weddingDate = weddingDate.subtract(hours, 'hours');
+                    let minutes = values.minutes || weddingDate.diff(moment(), 'minutes');
+                    weddingDate = weddingDate.subtract(minutes, 'minutes');
+                    let seconds = values.seconds || weddingDate.diff(moment(), 'seconds');
+
                     return (
                       <div
                         style={{
@@ -70,19 +79,23 @@ function HomePage() {
                         <Grid container>
                           <Grid item sm={12} md={8}>
                             <Stack direction={'row'} spacing={2}>
-                              <CountDisplay value={values.days} title={'Days'} />
-                              <CountDisplay value={values.hours} title={'hours'} />
-                              <CountDisplay value={values.minutes} title={'minutes'} />
-                              <CountDisplay value={values.seconds} title={'seconds'} />
+                              <CountDisplay value={days} title={'Days'} />
+                              <CountDisplay value={hours} title={'hours'} />
+                              <CountDisplay value={minutes} title={'minutes'} />
+                              <CountDisplay value={seconds} title={'seconds'} />
                             </Stack>
                           </Grid>
                         </Grid>
                       </div>
                     );
                   }}
-                  date={moment('12-08-2023 13:00:00', 'DD-MM-yyyy HH:mm:ss').format(
-                    'MM-DD-yyyy HH:mm:ss'
-                  )}
+                  date={
+                    '12-08-2023T13:00:00-06:00' ||
+                    new Date('12-08-2023T13:00:00-06:00') ||
+                    moment('12-08-2023 13:00:00', 'DD-MM-yyyy HH:mm:ss').format(
+                      'MM-DD-yyyy HH:mm:ss'
+                    )
+                  }
                 />
               )}
               <img
