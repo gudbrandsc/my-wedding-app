@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SakuraContainer from '../../SakuraContainer/SakuraContainer';
-import { Divider, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { Alert, AlertTitle, Divider, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
 import proposal from '../../assets/images/proposal5.jpg';
 import AccommodationSection from '../../Sections/AccommodationSection';
 import RegistrySection from '../../Sections/RegistrySection/RegistrySection';
@@ -37,6 +37,16 @@ function HomePage() {
               August 12th 2023 • Hønefoss, Norway
             </Typography>
           </Stack>
+        </Grid>
+        <Grid item xs={8}>
+          <Alert severity={'error'}>
+            <AlertTitle sx={{ fontWeight: 600 }}>Friday Event</AlertTitle>
+            The event on <b>friday</b> has moved location due to the flood. Please see the{' '}
+            <i style={{ fontWeight: 600, cursor: 'pointer' }} onClick={() => setTab(6)}>
+              <u>friday section</u>
+            </i>{' '}
+            if you are attending the friday event.
+          </Alert>
         </Grid>
         <Grid item xs={8}>
           <Tabs variant={'scrollable'} value={tab} onChange={(_, val) => setTab(val)}>
